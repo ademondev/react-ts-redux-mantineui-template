@@ -3,15 +3,6 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
-import { registerSW } from 'virtual:pwa-register';
-
-const updateSW = registerSW({
-  onOfflineReady() {
-    // Render a dialog or a modal to show the user offline mode is ready
-    console.log('Offline is ready!');
-  },
-})
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
